@@ -24,13 +24,8 @@ node {
         }
     }
 
-        stage('Test') {
-        /* This executes the test established in the  
-         * package.json */
-         
-        app.inside{
-           sh 'echo Test Completed Successfully'
-        }
+    stage('Output') {
+        sh 'echo "Test Completed with NO ERRORS"'
     }
 
     stage('Push image') {
