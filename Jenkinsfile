@@ -15,6 +15,15 @@ node {
         app = docker.build('marticam/example-app-kmi')
     }
 
+    stage('Test') {
+        /* This executes the test established in the  
+         * package.json */
+         
+        app.inside{
+            sh 'npm test'
+        }
+    }
+
     stage('Push image') {
         /* Finally, we'll push the image into Docker Hub */
 
