@@ -29,7 +29,7 @@ node {
          * package.json */
          
         app.inside{
-            'echo Test Completed Successfully'
+           sh 'echo Test Completed Successfully'
         }
     }
 
