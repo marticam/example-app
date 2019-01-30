@@ -4,6 +4,7 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
+        /* Its a short annotation to tell Jenkins to clone or checkout the code repository defined for this job */
         checkout scm
     }
 
@@ -11,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("getintodevops/example-app")
+        app = docker.build('marticam/example-app-kmi')
     }
 
     stage('Push image') {
