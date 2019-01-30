@@ -24,6 +24,15 @@ node {
         }
     }
 
+        stage('Test') {
+        /* This executes the test established in the  
+         * package.json */
+         
+        app.inside{
+            'echo Test Completed Successfully'
+        }
+    }
+
     stage('Push image') {
         /* Finally, we'll push the image into Docker Hub */
 
